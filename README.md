@@ -4,6 +4,7 @@ This packages is the implmentation of the [EIM (Empirical Interpolation Method) 
 
 
 
+This packages is written in python and use Pytorch as a backend, the computation can be accelerated by uwing GPU (check docs to use it)
 
 The algorithm has been first introduce in this [2007 paper](https://hal.archives-ouvertes.fr/hal-00174797/document) : 
 
