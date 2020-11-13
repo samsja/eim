@@ -3,9 +3,7 @@ setup.py
 eim/__init__.py
 eim/eim_class.py
 eim/eim_optim.py
-eim/eim/__init__.py
-eim/eim/eim_class.py
-eim/eim/eim_optim.py
+eim/utils.py
 eim_samsja_faycal.egg-info/PKG-INFO
 eim_samsja_faycal.egg-info/SOURCES.txt
 eim_samsja_faycal.egg-info/dependency_links.txt

@@ -1,8 +1,9 @@
 import torch
 import numpy as np
 from .eim_class import eim_vectorial
+from .utils import unravel_index
 
-class eim_vectorial_optim(eim_vectorial):
+class Eim(eim_vectorial):
     '''
 
     Summary :
@@ -179,14 +180,14 @@ class eim_vectorial_optim(eim_vectorial):
 
 
             a = torch.argmax(torch.abs(self.Z - self.I))
-            [arg_mu_0,arg_x0,arg_j0] = np.unravel_index(a, self.Z.shape)
+            [arg_mu_0,arg_x0,arg_j0] = unravel_index(a, self.Z.shape)
 
             bas = (self.Z-self.I)[arg_mu_0,arg_x0,arg_j0]
             dist_max = torch.abs(bas)
 
             ## update class variable
             if dist_max <= epsilon:
-                return dist_max
+                return dist_max.to("cpu")
 
             q = (self.Z-self.I)[arg_mu_0]/bas
 
@@ -250,3 +251,8 @@ class eim_vectorial_optim(eim_vectorial):
 
         '''
         [self.Q_tab,self.mu_magics,self.x_magics,self.j_magics,self.m] = torch.load(file)
+
+
+class eim_vectorial_optim(Eim):
+    pass
+
