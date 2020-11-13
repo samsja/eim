@@ -3,7 +3,7 @@ import numpy as np
 from .eim_class import eim_vectorial
 from .utils import unravel_index
 
-class eim_vectorial_optim(eim_vectorial):
+class Eim(eim_vectorial):
     '''
 
     Summary :
@@ -251,3 +251,8 @@ class eim_vectorial_optim(eim_vectorial):
 
         '''
         [self.Q_tab,self.mu_magics,self.x_magics,self.j_magics,self.m] = torch.load(file)
+
+
+class eim_vectorial_optim(Eim):
+    pass
+
