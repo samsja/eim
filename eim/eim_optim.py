@@ -99,6 +99,9 @@ class Eim(eim_vectorial):
 
 
 
+    def _compute_Q_at_magic_points(self,m):
+        return (self.Q_tab[0:m,self.x_magics[0:m],self.j_magics[0:m]].T).to(self.device)
+
 
     def compute_alpha(self,m,Z):
         '''
@@ -117,7 +120,7 @@ class Eim(eim_vectorial):
 
         '''
         with torch.no_grad():
-            mat = (self.Q_tab[0:m,self.x_magics[0:m],self.j_magics[0:m]].T).to(self.device)
+            mat = self._compute_Q_at_magic_points(m)
 
             b = Z[:,self.x_magics[0:m],self.j_magics[0:m]]
             b = b.T.view(m,Z.shape[0])
