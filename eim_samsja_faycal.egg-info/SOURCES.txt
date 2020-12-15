@@ -9,3 +9,4 @@ eim_samsja_faycal.egg-info/SOURCES.txt
 eim_samsja_faycal.egg-info/dependency_links.txt
 eim_samsja_faycal.egg-info/requires.txt
 eim_samsja_faycal.egg-info/top_level.txt
+test/test.py

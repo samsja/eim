@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: eim-samsja-faycal
-Version: 0.0.1
+Version: 0.0.2
 Summary: implementation of Empirical Interpolation Methods (EIM) algorithm
 Home-page: https://github.com/samsja/eim
 Author: Sami Jaghouar And Faycal Rekbi
@@ -32,8 +32,14 @@ Description: # EIM Package ( Empirical Interpolation Method)
         python setup.py sdist bdist_wheel
         ```
         
+        * To launch the test
         
+        install pytest first
         
+        ```shel
+        cd test
+        pytest test.py
+        ```
         
         ## About the project
         

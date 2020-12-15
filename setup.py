@@ -11,7 +11,7 @@ with open("requirements.txt") as f:
 
 setuptools.setup(
     name="eim-samsja-faycal", # Replace with your own username  
-    version="0.0.1",
+    version="0.0.2",
     author="Sami Jaghouar And Faycal Rekbi",
     author_email="sami.jaghouar@hotmail.fr faycal.rekbdi@etu.utc.fr",
     description="implementation of Empirical Interpolation Methods (EIM) algorithm",

@@ -15,7 +15,7 @@ Yvon Maday, Ngoc Cuong Nguyen, Anthony T. Patera, George S.H. Pau.  A general, m
 * To install and uses the library
 
 ```shell
-pip install dist/eim_samsja_faycal-0.0.1-py3-none-any.whl
+pip install dist/eim_samsja_faycal-0.0.2-py3-none-any.whl
 ```
 
 * To build the packages from sources
@@ -24,8 +24,14 @@ pip install dist/eim_samsja_faycal-0.0.1-py3-none-any.whl
 python setup.py sdist bdist_wheel
 ```
 
+* To launch the test
 
+install pytest first
 
+```shel
+cd test
+pytest test.py
+```
 
 ## About the project
 
