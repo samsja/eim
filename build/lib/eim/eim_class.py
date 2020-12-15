@@ -123,7 +123,14 @@ class eim_vectorial:
         >>> we have a 1-kolmogorov-width with a final error of 0.0, dimensionality reduction : 0.0
         '''
 
+
+
+        if not(nb_iter==float("inf")):
+            epsilon = 0
+
+
         self.epsilon = epsilon
+
 
         if reset:
             self._reset_()
@@ -140,7 +147,7 @@ class eim_vectorial:
         if plot and not(nb_iter == float('inf'))  :
                 self._plot()
 
-        while self.error["infinite"][-1]>epsilon and len(self.error["infinite"])<nb_iter:
+        while self.error["infinite"][-1]>self.epsilon and len(self.error["infinite"])<nb_iter:
             t1= time.time()
             delta =t1-t0
             t0=t1
@@ -192,7 +199,13 @@ class eim_vectorial:
     def _plot(self):
         raise NotImplementedError("according to your datas you should heritate this class and implement the plot function")
 
+    
+    def get_Q_tab(self,kolmo_width=None):
 
+        if kolmo_width == None:
+            kolmo_width = self.m
+
+        return self.Q_tab[0:kolmo_width]
 
 class eim(eim_vectorial):
 
