@@ -3,6 +3,7 @@ import numpy as np
 from .eim_class import eim_vectorial
 from .utils import unravel_index
 
+
 class Eim(eim_vectorial):
     '''
 
