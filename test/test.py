@@ -58,3 +58,15 @@ def test_mu_magics():
     assert  (ev_test.mu_magics == ev_new.mu_magics).all() 
 
 
+def test_alphas():
+    
+    assert  (ev_test.compute_alpha(ev_test.m,ev_new.Z) == ev_new.compute_alpha(ev_new.m,ev_new.Z)).all() 
+
+
+def test_interpolation():
+    
+    alphas = ev_new.compute_alpha(ev_new.m,ev_new.Z)
+    
+    assert  (ev_test.project_with_alpha(alphas)== ev_new.project_with_alpha(alphas)).all()
+
+
