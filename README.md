@@ -18,7 +18,14 @@ Yvon Maday, Ngoc Cuong Nguyen, Anthony T. Patera, George S.H. Pau.  A general, m
 * To install and uses the library
 
 ```shell
+git clone https://github.com/samsja/eim.git
 pip install dist/eim_samsja_faycal-0.0.2-py3-none-any.whl
+```
+
+or without cloning the repo :
+
+```shel
+pip install git+https://github.com/samsja/eim
 ```
 
 * To build the packages from sources
