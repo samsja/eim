@@ -1,4 +1,4 @@
-src/__pycache__/*
+eim/__pycache__/*
 eim_samsja_faycal.egg-info/*
 
 *.pyc
