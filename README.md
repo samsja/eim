@@ -54,7 +54,7 @@ This packages has been developed in the context of a research project at the [Un
 
 ### Contributor and Supervisor
 
-* **Florian De Vuyst** : head of LMAC ( [laboratory of Applied Mathematics of Compiègne](http://lmac.utc.fr/ )
+* **Florian De Vuyst** : head of LMAC ( [laboratory of Applied Mathematics of Compiègne](http://lmac.utc.fr/ ))
 
 * **Anne-Virginie Salsac** : CNRS Director of Research at BMBI ( [laboraty of biomecanics et bioengineering](https://bmbi.utc.fr/))
 
