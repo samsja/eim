@@ -32,7 +32,7 @@ python setup.py sdist bdist_wheel
 install pytest first
 
 ```shel
-cd test
+cd tests
 pytest test.py
 ```
 
