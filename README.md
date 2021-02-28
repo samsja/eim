@@ -39,8 +39,7 @@ python setup.py sdist bdist_wheel
 install pytest first
 
 ```shel
-cd tests
-pytest test.py
+pytest tests/test.py
 ```
 
 ## About the project

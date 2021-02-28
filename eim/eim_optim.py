@@ -104,7 +104,7 @@ class Eim(eim_vectorial):
         return (self.Q_tab[0:m,self.x_magics[0:m],self.j_magics[0:m]].T).to(self.device)
 
 
-    def compute_alpha(self,m,Z):
+    def compute_alpha(self,m,Z=None,z_at_magic_points=None):
         '''
         Summary
 
@@ -118,16 +118,24 @@ class Eim(eim_vectorial):
 
             m : integer : it is the eim basis that you want to use you would usualy wanted to use self.m
             Z: Torch Tensor (N,M,D) the input datas that you want to project in the m-eim basis
-
+            
         '''
         with torch.no_grad():
+
+            
             mat = self._compute_Q_at_magic_points(m)
 
-            b = Z[:,self.x_magics[0:m],self.j_magics[0:m]]
-            b = b.T.view(m,Z.shape[0])
-            b = b.to(self.device)
+            if z_at_magic_points is None:               
+                z_at_magic_points = Z[:,self.x_magics[0:m],self.j_magics[0:m]]
+            else:
+                if Z is not None:
+                    raise ValueError(" if z_at_magic_points is passed qs args Z should be None ")
 
-            alpha,lu = torch.solve(b,mat)
+
+            z_at_magic_points = z_at_magic_points.T.view(m,z_at_magic_points.shape[0])
+            z_at_magic_points= z_at_magic_points.to(self.device)
+            
+            alpha,lu = torch.solve(z_at_magic_points,mat)
 
             return alpha
 
