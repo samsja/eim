@@ -1,13 +1,5 @@
 
-import os
-
-os.chdir("../")
-
-
 from eim import Eim
-
-
-os.chdir("test/")
 
 
 import matplotlib.pyplot as plt
@@ -36,7 +28,7 @@ ev_new.reach_precision(epsilon=1e-1,plot=False,silent=True)
 ev_new.compress_model()
 
 ev_test = Eim(None,load=True)
-ev_test.load_model("test.model")
+ev_test.load_model("tests/test.model")
 
 
 

@@ -19,7 +19,7 @@ Yvon Maday, Ngoc Cuong Nguyen, Anthony T. Patera, George S.H. Pau.  A general, m
 
 ```shell
 git clone https://github.com/samsja/eim.git
-pip install dist/eim_samsja_faycal-0.0.2-py3-none-any.whl
+pip install dist/eim_samsja_faycal-0.0.3-py3-none-any.whl
 ```
 
 or without cloning the repo :
@@ -31,7 +31,7 @@ pip install git+https://github.com/samsja/eim
 * To build the packages from sources
 
 ```shell
-python setup.py sdist bdist_wheel
+python setup.py sdist bdist_wheel                        
 ```
 
 * To launch the test
@@ -39,8 +39,7 @@ python setup.py sdist bdist_wheel
 install pytest first
 
 ```shel
-cd tests
-pytest test.py
+pytest tests/test.py
 ```
 
 ## About the project
